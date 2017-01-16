@@ -23,7 +23,6 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #include <map>
-#include <sstream>
 #include <string>
 
 #pragma once
@@ -37,13 +36,7 @@ public:
 
     bool LoadFile(const std::string &filename);
 
-    template<typename T>
-    void GetOption(const std::string &name, T &value) const;
-
     void GetOptionAsString(const std::string &name, std::string &value) const;
-
-    template<typename T>
-    T GetOptionDefault(const std::string &name, const T &defaultValue) const;
 
     std::string GetOptionAsStringDefault(const std::string &name, const std::string &defaultValue) const;
 
@@ -53,23 +46,3 @@ private:
     bool loaded_;
     OptionMap options_;
 };
-
-template<typename T>
-void ConfigReader::GetOption(const std::string &name, T &value) const {
-    value = GetOptionDefault(name, value);
-}
-
-template<typename T>
-T ConfigReader::GetOptionDefault(const std::string &name,
-    const T &default_) const {
-    OptionMap::const_iterator iterator = options_.find(name);
-    if (iterator != options_.end()) {
-        std::stringstream sstream(iterator->second);
-        T value;
-        sstream >> value;
-        if (sstream) {
-            return value;
-        }
-    }
-    return default_;
-}

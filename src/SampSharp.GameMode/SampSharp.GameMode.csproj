@@ -317,7 +317,12 @@
       <DependentUpon>VehicleModelInfo.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SampSharp.Bridge\SampSharp.Bridge.csproj">
+      <Project>{9a5dd39f-b292-4ab2-b0aa-015b16d9b46d}</Project>
+      <Name>SampSharp.Bridge</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

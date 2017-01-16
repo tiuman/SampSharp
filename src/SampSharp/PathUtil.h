@@ -16,7 +16,6 @@
 #include "platforms.h"
 #if SAMPSHARP_WINDOWS
 #include <direct.h>
-#define getcwd _getcwd // stupid MSFT "deprecation" warning
 #elif SAMPSHARP_LINUX
 #include <unistd.h>
 #endif
@@ -26,38 +25,32 @@
 
 struct PathUtil
 {
-    static std::string GetBinDirectory()
-    {
+    static std::string GetBinDirectory() {
         #if SAMPSHARP_WINDOWS
-        std::string s_cwd(getcwd(NULL, 0));
+        std::string s_cwd(_getcwd(NULL, 0));
         return s_cwd.append("/");
         #elif SAMPSHARP_LINUX
         return "./";
         #endif
     }
 
-    static std::string GetPathInBin(std::string append)
-    {
+    static std::string GetPathInBin(std::string append) {
         return GetBinDirectory().append(append);
     }
 
-    static std::string GetMonoDirectory()
-    {
+    static std::string GetMonoDirectory() {
         return GetPathInBin("mono/");
     }
 
-    static std::string GetLibDirectory()
-    {
+    static std::string GetLibDirectory() {
         return GetMonoDirectory().append("lib/");
     }
 
-    static std::string GetConfigDirectory()
-    {
+    static std::string GetConfigDirectory() {
         return GetMonoDirectory().append("etc/");
     }
 
-    static std::string GetGameModeDirectory()
-    {
+    static std::string GetGameModeDirectory() {
         return GetPathInBin("gamemode/");
     }
 };

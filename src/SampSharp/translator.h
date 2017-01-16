@@ -13,6 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <mono/jit/jit.h>
+
 #pragma once
 
-#define PLUGIN_VERSION "0.8.0"
+// translate a char array to a mono string using the active codepage.
+MonoString *translate_to_mono_string(char *str, int len);
+
+// translate a mono string to a char array using the active codepage.
+char *translate_from_mono_string(MonoString *str);
+
+// load a translation from the /codepages directory.
+bool translate_load_file(char *name);

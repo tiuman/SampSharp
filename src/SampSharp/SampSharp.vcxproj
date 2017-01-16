@@ -98,23 +98,23 @@
     <None Include="SampSharp.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Config.cpp" />
     <ClCompile Include="ConfigReader.cpp" />
-    <ClCompile Include="GameMode.cpp" />
+    <ClCompile Include="environment.cpp" />
     <ClCompile Include="includes\sampgdk\sampgdk.c" />
     <ClCompile Include="includes\sdk\amxplugin.cpp" />
-    <ClCompile Include="MonoRuntime.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="bridge.cpp" />
+    <ClCompile Include="translator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Config.h" />
     <ClInclude Include="ConfigReader.h" />
-    <ClInclude Include="GameMode.h" />
+    <ClInclude Include="environment.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="MonoRuntime.h" />
     <ClInclude Include="PathUtil.h" />
     <ClInclude Include="platforms.h" />
+    <ClInclude Include="bridge.h" />
     <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="translator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

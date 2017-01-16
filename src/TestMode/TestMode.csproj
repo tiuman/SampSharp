@@ -69,12 +69,30 @@
     <Compile Include="World\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SampSharp.Bridge\SampSharp.Bridge.csproj">
+      <Project>{9a5dd39f-b292-4ab2-b0aa-015b16d9b46d}</Project>
+      <Name>SampSharp.Bridge</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SampSharp.GameMode\SampSharp.GameMode.csproj">
       <Project>{ccfb350d-bd04-41ab-a9f8-79767e94727e}</Project>
       <Name>SampSharp.GameMode</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{629CB73E-1FBE-4FA1-81F4-F7C15FCA9590}" Configuration="Debug|Any CPU">
+        <SampSharpFlavorConfig>
+          <GameMode>GameMode</GameMode>
+        </SampSharpFlavorConfig>
+      </FlavorProperties>
+      <FlavorProperties GUID="{629CB73E-1FBE-4FA1-81F4-F7C15FCA9590}" Configuration="Release|Any CPU">
+        <SampSharpFlavorConfig>
+          <GameMode>GameMode</GameMode>
+        </SampSharpFlavorConfig>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

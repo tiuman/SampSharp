@@ -25,6 +25,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
+#include <sstream>
 #include <fstream>
 #include <iostream>
 #include <sstream>

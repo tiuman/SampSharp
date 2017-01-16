@@ -13,18 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <string>
-#include "PathUtil.h"
-
 #pragma once
 
-class MonoRuntime {
-public:
-    static bool IsLoaded() {
-        return isLoaded_;
-    }
-    static void Load(std::string assemblyDir, std::string configDir,
-        std::string traceLevel, std::string file);
-private:
-    static bool isLoaded_;
-};
+// returns a pointer to the environment variable with the specified name.
+char *environment_get(const char *name);

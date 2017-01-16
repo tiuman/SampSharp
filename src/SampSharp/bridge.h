@@ -13,6 +13,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <amx/amx.h>
+
 #pragma once
 
-#define PLUGIN_VERSION "0.8.0"
+// loads the bridge. returns false if the bridge could not be loaded. the plugin
+// should be terminated at this point.
+bool bridge_load(const char *assembly_dir,
+    const char *config_dir,
+    const char *bridge_dir,
+    const char *trace_level,
+    const char *debugger_address);
+
+// unloads the server. returns false if the server could not be unloaded.
+bool bridge_unload();
+
+// returns true if the server has been loaded.
+bool bridge_loaded();
+
+// handles a tick.
+void bridge_tick();
+
+// handles a public call.
+void bridge_call(AMX *amx, const char *name, cell *params, cell *retval);

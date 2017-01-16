@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampSharp", "src\SampSharp\SampSharp.vcxproj", "{39908193-8E5A-42EC-B71B-5D457CE87823}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D} = {9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampSharp.GameMode", "src\SampSharp.GameMode\SampSharp.GameMode.csproj", "{CCFB350D-BD04-41AB-A9F8-79767E94727E}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -13,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMode", "src\TestMode\TestMode.csproj", "{D5E69763-0993-45C1-88F2-8B3A1FE97CCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampSharp.UnitTests", "src\SampSharp.UnitTests\SampSharp.UnitTests.csproj", "{01A46856-2437-40EC-BC65-8093E8288D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampSharp.Bridge", "src\SampSharp.Bridge\SampSharp.Bridge.csproj", "{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +74,18 @@ Global
 		{01A46856-2437-40EC-BC65-8093E8288D94}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{01A46856-2437-40EC-BC65-8093E8288D94}.Release|Win32.ActiveCfg = Release|Any CPU
 		{01A46856-2437-40EC-BC65-8093E8288D94}.Release|Win32.Build.0 = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Debug|Win32.Build.0 = Debug|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Win32.ActiveCfg = Release|Any CPU
+		{9A5DD39F-B292-4AB2-B0AA-015B16D9B46D}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
